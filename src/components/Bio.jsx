@@ -1,4 +1,5 @@
 import { Facebook, Github } from 'lucide-react';
+import logoUrl from '/public/pfp.png';
 
 export default function Bio() {
   return (
@@ -30,7 +31,7 @@ export default function Bio() {
         <div className="flex items-center justify-center">
           <div className="relative w-full h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center overflow-hidden border border-cyan-500/30 shadow-[0_0_30px_rgba(6,182,212,0.2)]">
             <img
-              src="/public/pfp.png"
+              src={logoUrl || "/public/pfp.png"}
               alt="Kenji Agustine Caayohan"
               className="w-full h-full object-cover object-bottom"
             />

@@ -36,10 +36,11 @@ export default function Portfolio() {
     ];
 
     const imgMap = {
-        fcfs: fcfsUrl,
-        ecom: ecomUrl,
-        cards: cardsUrl,
+        1: fcfsUrl,
+        3: ecomUrl,
+        4: cardsUrl,
     };
+
 
 
     return (

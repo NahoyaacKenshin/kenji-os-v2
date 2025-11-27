@@ -65,7 +65,7 @@ export default function Portfolio() {
 
                             />
                             {/* Overlay on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+                            <div className="absolute inset-0  bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
                                 <h3 className="text-cyan-400 font-mono font-semibold text-lg mb-2">
                                     {project.title}
                                 </h3>

@@ -1,27 +1,5 @@
-// export default function Portfolio() {
-//   return (
-//     <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-[0_0_40px_rgba(6,182,212,0.3)] border border-cyan-500/20 p-8">
-//       <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-//         Portfolio
-//       </h2>
-//       <div className="grid md:grid-cols-3 gap-6">
-//         {[1, 2, 3, 4, 5, 6].map((item) => (
-//           <div
-//             key={item}
-//             className="aspect-square bg-gradient-to-br from-slate-700/50 to-slate-800/50 rounded-xl hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all cursor-pointer border border-cyan-500/20 hover:border-cyan-400/50 hover:scale-105 group"
-//           >
-//             <div className="w-full h-full flex items-center justify-center text-gray-500 group-hover:text-cyan-400 transition-colors font-mono">
-//               Project_{item}
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
 export default function Portfolio() {
-  // Define your portfolio projects with images
+  
   const projects = [
     {
       id: 1,

@@ -1,4 +1,5 @@
 import { Menu, X } from 'lucide-react';
+import logoUrl from '/public/logo.png';
 
 export default function Navigation({ activeTab, setActiveTab, mobileMenuOpen, setMobileMenuOpen }) {
   return (
@@ -8,7 +9,7 @@ export default function Navigation({ activeTab, setActiveTab, mobileMenuOpen, se
           {/* Logo */}
           <div className="py-4">
             <img 
-              src="/public/logo.png" 
+              src={logoUrl || "/public/logo.png"} 
               alt="Logo" 
               className="h-12 w-auto"
             />

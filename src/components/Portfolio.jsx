@@ -1,9 +1,9 @@
+import { ExternalLink, Code } from 'lucide-react';
 import fcfsUrl from '/public/fcfs.png';
 import ecomUrl from '/public/ecom.png';
 import cardsUrl from '/public/cards.png';
 
 export default function Portfolio() {
-
     const projects = [
         {
             id: 1,
@@ -41,37 +41,80 @@ export default function Portfolio() {
         4: cardsUrl,
     };
 
-
-
     return (
-        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-[0_0_40px_rgba(6,182,212,0.3)] border border-cyan-500/20 p-8">
-            <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                My Projects
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+        <div className="space-y-8">
+            {/* Header */}
+            <div className="relative group">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
+                <div className="relative bg-slate-900/80 backdrop-blur-xl rounded-3xl border border-slate-700/50 shadow-2xl p-8 lg:p-12">
+                    <div className="flex items-center gap-4 mb-2">
+                        <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30">
+                            <Code className="text-cyan-400" size={24} />
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                            My Projects
+                        </h2>
+                    </div>
+                    <div className="h-1 w-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mt-4"></div>
+                    <p className="text-slate-400 mt-6 max-w-2xl">
+                        A collection of my recent work showcasing my skills in web development and software engineering.
+                    </p>
+                </div>
+            </div>
+
+            {/* Projects Grid */}
+            <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
                 {projects.map((project) => (
                     <a
                         key={project.id}
                         href={project.link}
                         target="_blank"
-                        className="aspect-square bg-gradient-to-br from-slate-700/50 to-slate-800/50 rounded-xl hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all cursor-pointer border border-cyan-500/20 hover:border-cyan-400/50 hover:scale-105 group overflow-hidden block"
+                        rel="noopener noreferrer"
+                        className="group relative block"
                     >
-                        {/* Image */}
-                        <div className="relative w-full h-full">
-                            <img
-                                src={imgMap[project.id] || project.image}
-                                alt={project.title}
-                                className="w-full h-full object-cover brightness-75"
+                        {/* Glow effect */}
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-cyan-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                        
+                        <div className="relative aspect-square bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-700/50 overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-cyan-500/20 transition-all duration-500 group-hover:scale-[1.02]">
+                            {/* Image */}
+                            <div className="relative w-full h-full">
+                                {imgMap[project.id] ? (
+                                    <img
+                                        src={imgMap[project.id]}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover brightness-75 transition-all duration-500 group-hover:scale-110"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+                                        <Code className="text-slate-700" size={64} />
+                                    </div>
+                                )}
+                                
+                                {/* Subtle bottom gradient for text readability */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent"></div>
+                                
+                                {/* Content overlay */}
+                                <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
+                                    <div className="transform translate-y-2 group-hover:translate-y-0 opacity-90 group-hover:opacity-100 transition-all duration-500">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <h3 className="text-xl lg:text-2xl font-bold text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                                                {project.title}
+                                            </h3>
+                                            <div className="p-2 bg-cyan-500/20 rounded-lg border border-cyan-500/30 group-hover:bg-cyan-500/30 group-hover:scale-110 transition-all duration-300">
+                                                <ExternalLink className="text-cyan-400" size={18} />
+                                            </div>
+                                        </div>
+                                        <p className="text-slate-300 text-sm lg:text-base leading-relaxed">
+                                            {project.description}
+                                        </p>
+                                        
+                                        {/* Decorative line */}
+                                        <div className="h-0.5 w-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    </div>
+                                </div>
 
-                            />
-                            {/* Overlay on hover */}
-                            <div className="absolute inset-0  bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
-                                <h3 className="text-cyan-400 font-mono font-semibold text-lg mb-2">
-                                    {project.title}
-                                </h3>
-                                <p className="text-gray-300 text-sm text-center">
-                                    {project.description}
-                                </p>
+                                {/* Hover effect border */}
+                                <div className="absolute inset-0 border-2 border-cyan-500/0 group-hover:border-cyan-500/30 rounded-2xl transition-all duration-500"></div>
                             </div>
                         </div>
                     </a>

@@ -11,7 +11,9 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+      <Background />
+      
       <Navigation 
         activeTab={activeTab} 
         setActiveTab={setActiveTab}
@@ -19,13 +21,15 @@ export default function App() {
         setMobileMenuOpen={setMobileMenuOpen}
       />
 
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        {activeTab === 'bio' && <Bio />}
-        {activeTab === 'about' && <AboutMe />}
-        {activeTab === 'portfolio' && <Portfolio />}
-      </div>
-
-      <Background />
+      <main className="relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+          <div className="animate-fade-in">
+            {activeTab === 'bio' && <Bio />}
+            {activeTab === 'about' && <AboutMe />}
+            {activeTab === 'portfolio' && <Portfolio />}
+          </div>
+        </div>
+      </main>
     </div>
   );
 }

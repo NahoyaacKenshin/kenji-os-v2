@@ -9,14 +9,7 @@ export default function Portfolio() {
             id: 1,
             title: "CPU Scheduling",
             image: "/public/fcfs.png",
-            description: "First Come First Serve",
-            link: "https://cpu-scheduling-fcfs.vercel.app/"
-        },
-        {
-            id: 2,
-            title: "Project 2",
-            image: "/path/to/image2.jpg",
-            description: "Project description",
+            description: "FCFS, SJF & Priority Scheduling Algorithms",
             link: "https://cpu-scheduling-fcfs.vercel.app/"
         },
         {
@@ -30,7 +23,7 @@ export default function Portfolio() {
             id: 4,
             title: "Product Cards",
             image: "/public/cards.png",
-            description: "Practice Activity",
+            description: "Application Development Practice Activity",
             link: "https://product-card-apps-dev.vercel.app/"
         }
     ];

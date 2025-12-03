@@ -24,7 +24,7 @@ export default function App() {
           setMobileMenuOpen={setMobileMenuOpen}
         />
 
-        <main className="relative z-10">
+        <main className="relative z-10 pt-20 sm:pt-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
             <div className="animate-fade-in">
               {activeTab === 'bio' && <Bio />}

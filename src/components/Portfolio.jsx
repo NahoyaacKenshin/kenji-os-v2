@@ -39,17 +39,17 @@ export default function Portfolio() {
             {/* Header */}
             <div className="relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                <div className="relative bg-slate-900/80 backdrop-blur-xl rounded-3xl border border-slate-700/50 shadow-2xl p-8 lg:p-12">
+                <div className="relative bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-2xl p-8 lg:p-12 transition-colors duration-300">
                     <div className="flex items-center gap-4 mb-2">
                         <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30">
-                            <Code className="text-cyan-400" size={24} />
+                            <Code className="text-cyan-600 dark:text-cyan-400" size={24} />
                         </div>
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-600 via-blue-600 to-cyan-500 dark:from-cyan-400 dark:via-blue-400 dark:to-cyan-300 bg-clip-text text-transparent">
                             My Projects
                         </h2>
                     </div>
                     <div className="h-1 w-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mt-4"></div>
-                    <p className="text-slate-400 mt-6 max-w-2xl">
+                    <p className="text-slate-600 dark:text-slate-400 mt-6 max-w-2xl">
                         A collection of my recent work showcasing my skills in web development and software engineering.
                     </p>
                 </div>
@@ -68,7 +68,7 @@ export default function Portfolio() {
                         {/* Glow effect */}
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-cyan-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
                         
-                        <div className="relative aspect-square bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-700/50 overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-cyan-500/20 transition-all duration-500 group-hover:scale-[1.02]">
+                        <div className="relative aspect-square bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-200/50 dark:border-slate-700/50 overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-cyan-500/20 transition-all duration-500 group-hover:scale-[1.02]">
                             {/* Image */}
                             <div className="relative w-full h-full">
                                 {imgMap[project.id] ? (
@@ -78,26 +78,26 @@ export default function Portfolio() {
                                         className="w-full h-full object-cover brightness-75 transition-all duration-500 group-hover:scale-110"
                                     />
                                 ) : (
-                                    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-                                        <Code className="text-slate-700" size={64} />
+                                    <div className="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center">
+                                        <Code className="text-slate-400 dark:text-slate-700" size={64} />
                                     </div>
                                 )}
                                 
                                 {/* Subtle bottom gradient for text readability */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent dark:from-slate-900/70 dark:via-slate-900/20"></div>
                                 
                                 {/* Content overlay */}
                                 <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
                                     <div className="transform translate-y-2 group-hover:translate-y-0 opacity-90 group-hover:opacity-100 transition-all duration-500">
                                         <div className="flex items-center justify-between mb-3">
-                                            <h3 className="text-xl lg:text-2xl font-bold text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                                            <h3 className="text-xl lg:text-2xl font-bold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-700 dark:group-hover:text-cyan-300 transition-colors">
                                                 {project.title}
                                             </h3>
                                             <div className="p-2 bg-cyan-500/20 rounded-lg border border-cyan-500/30 group-hover:bg-cyan-500/30 group-hover:scale-110 transition-all duration-300">
-                                                <ExternalLink className="text-cyan-400" size={18} />
+                                                <ExternalLink className="text-cyan-600 dark:text-cyan-400" size={18} />
                                             </div>
                                         </div>
-                                        <p className="text-slate-300 text-sm lg:text-base leading-relaxed">
+                                        <p className="text-slate-700 dark:text-slate-300 text-sm lg:text-base leading-relaxed">
                                             {project.description}
                                         </p>
                                         
@@ -116,4 +116,3 @@ export default function Portfolio() {
         </div>
     );
 }
-

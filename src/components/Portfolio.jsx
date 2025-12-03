@@ -84,20 +84,20 @@ export default function Portfolio() {
                                 )}
                                 
                                 {/* Subtle bottom gradient for text readability */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent dark:from-slate-900/70 dark:via-slate-900/20"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent dark:from-slate-900/70 dark:via-slate-900/20"></div>
                                 
                                 {/* Content overlay */}
                                 <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
                                     <div className="transform translate-y-2 group-hover:translate-y-0 opacity-90 group-hover:opacity-100 transition-all duration-500">
                                         <div className="flex items-center justify-between mb-3">
-                                            <h3 className="text-xl lg:text-2xl font-bold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-700 dark:group-hover:text-cyan-300 transition-colors">
+                                            <h3 className="text-xl lg:text-2xl font-bold text-white dark:text-cyan-400 group-hover:text-cyan-300 dark:group-hover:text-cyan-300 transition-colors drop-shadow-lg">
                                                 {project.title}
                                             </h3>
-                                            <div className="p-2 bg-cyan-500/20 rounded-lg border border-cyan-500/30 group-hover:bg-cyan-500/30 group-hover:scale-110 transition-all duration-300">
-                                                <ExternalLink className="text-cyan-600 dark:text-cyan-400" size={18} />
+                                            <div className="p-2 bg-white/20 dark:bg-cyan-500/20 rounded-lg border border-white/30 dark:border-cyan-500/30 group-hover:bg-white/30 dark:group-hover:bg-cyan-500/30 group-hover:scale-110 transition-all duration-300">
+                                                <ExternalLink className="text-white dark:text-cyan-400" size={18} />
                                             </div>
                                         </div>
-                                        <p className="text-slate-700 dark:text-slate-300 text-sm lg:text-base leading-relaxed">
+                                        <p className="text-slate-100 dark:text-slate-300 text-sm lg:text-base leading-relaxed drop-shadow-md">
                                             {project.description}
                                         </p>
                                         
